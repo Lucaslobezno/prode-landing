@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="border-t border-[#2C2C2E] py-8 mt-auto">
@@ -11,18 +13,18 @@ export default function Footer() {
           </span>
         </div>
         <div className="flex items-center gap-6">
-          <a
-            href="#"
+          <Link
+            href="/privacidad"
             className="text-[#636366] hover:text-[#8E8E93] text-sm transition-colors"
           >
             Privacidad
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/terminos"
             className="text-[#636366] hover:text-[#8E8E93] text-sm transition-colors"
           >
             Términos
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
