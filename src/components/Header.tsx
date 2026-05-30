@@ -19,14 +19,14 @@ export default function Header() {
             href="#download"
             className="text-[#8E8E93] hover:text-white transition-colors text-sm"
           >
-            Descargar
+            Lista de espera
           </a>
         </nav>
         <a
           href="#download"
           className="bg-[#1D9E75] hover:bg-[#17805F] text-white text-sm font-medium px-5 py-2 rounded-full transition-colors"
         >
-          Descargar
+          Unirme
         </a>
       </div>
     </header>
