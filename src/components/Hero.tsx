@@ -77,7 +77,48 @@ export default function Hero() {
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#1D9E75]/10 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="relative max-w-4xl mx-auto px-6 text-center">
+      {/* Floating screenshots — hidden on mobile */}
+      {/* Left screenshot */}
+      <div className="hidden lg:block absolute left-[-60px] xl:left-[2%] top-1/2 -translate-y-1/2 pointer-events-none">
+        <div
+          className="w-[200px] xl:w-[240px] rounded-3xl overflow-hidden border border-[#2C2C2E]/40 shadow-2xl shadow-black/30"
+          style={{ transform: "rotate(-6deg)" }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/screen1.png"
+            alt=""
+            className="w-full h-auto opacity-35"
+          />
+          {/* Edge fades */}
+          <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0a0a0a] to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
+          <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#0a0a0a] to-transparent" />
+          <div className="absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-[#0a0a0a]/60 to-transparent" />
+        </div>
+      </div>
+
+      {/* Right screenshot */}
+      <div className="hidden lg:block absolute right-[-60px] xl:right-[2%] top-1/2 -translate-y-1/2 pointer-events-none">
+        <div
+          className="w-[200px] xl:w-[240px] rounded-3xl overflow-hidden border border-[#2C2C2E]/40 shadow-2xl shadow-black/30"
+          style={{ transform: "rotate(6deg)" }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/screen3.png"
+            alt=""
+            className="w-full h-auto opacity-35"
+          />
+          {/* Edge fades */}
+          <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0a0a0a] to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
+          <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#0a0a0a] to-transparent" />
+          <div className="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-[#0a0a0a]/60 to-transparent" />
+        </div>
+      </div>
+
+      <div className="relative max-w-4xl mx-auto px-6 text-center z-10">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 bg-[#141414] border border-[#2C2C2E] rounded-full px-4 py-2 mb-8">
           <span className="w-2 h-2 rounded-full bg-[#1D9E75] animate-pulse" />
