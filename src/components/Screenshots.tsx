@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const screens = [
   { src: "/screen1.png", alt: "Prode — Tareas y Pomodoro", rotate: "-6deg", translate: "0, 12px", delay: "0s" },
   { src: "/screen2.png", alt: "Prode — Hábitos", rotate: "0deg", translate: "0, -8px", delay: "0.15s" },
@@ -34,13 +32,13 @@ export default function Screenshots() {
               >
                 {/* Phone frame */}
                 <div className="relative w-[140px] sm:w-[180px] md:w-[220px] rounded-2xl sm:rounded-3xl overflow-hidden border border-[#2C2C2E]/60 shadow-2xl shadow-black/40">
-                  <Image
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
                     src={screen.src}
                     alt={screen.alt}
                     width={440}
                     height={956}
                     className="w-full h-auto opacity-60"
-                    priority={i === 1}
                   />
                   {/* Top fade overlay */}
                   <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#0a0a0a]/50 to-transparent pointer-events-none" />
