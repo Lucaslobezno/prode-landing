@@ -78,43 +78,57 @@ export default function Hero() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#1D9E75]/10 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Floating screenshots — hidden on mobile */}
-      {/* Left screenshot */}
-      <div className="hidden lg:block absolute left-[-60px] xl:left-[2%] top-1/2 -translate-y-1/2 pointer-events-none">
+      {/* Left screenshot — shifted up */}
+      <div className="hidden lg:block absolute left-[-40px] xl:left-[1%] top-[42%] -translate-y-1/2 pointer-events-none">
         <div
-          className="w-[200px] xl:w-[240px] rounded-3xl overflow-hidden border border-[#2C2C2E]/40 shadow-2xl shadow-black/30"
+          className="relative w-[240px] xl:w-[280px] rounded-3xl overflow-hidden border border-[#2C2C2E]/40 shadow-2xl shadow-black/40"
           style={{ transform: "rotate(-6deg)" }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/screen1.png"
             alt=""
-            className="w-full h-auto opacity-35"
+            className="w-full h-auto opacity-55"
+          />
+          {/* Radial depth glow — brighter center, fades outward */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background: "radial-gradient(ellipse at 50% 40%, transparent 20%, rgba(10,10,10,0.55) 70%, rgba(10,10,10,0.9) 100%)",
+            }}
           />
           {/* Edge fades */}
-          <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0a0a0a] to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
-          <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#0a0a0a] to-transparent" />
-          <div className="absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-[#0a0a0a]/60 to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#0a0a0a] to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
+          <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#0a0a0a] to-transparent" />
+          <div className="absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-[#0a0a0a]/60 to-transparent" />
         </div>
       </div>
 
-      {/* Right screenshot */}
-      <div className="hidden lg:block absolute right-[-60px] xl:right-[2%] top-1/2 -translate-y-1/2 pointer-events-none">
+      {/* Right screenshot — shifted down */}
+      <div className="hidden lg:block absolute right-[-40px] xl:right-[1%] top-[58%] -translate-y-1/2 pointer-events-none">
         <div
-          className="w-[200px] xl:w-[240px] rounded-3xl overflow-hidden border border-[#2C2C2E]/40 shadow-2xl shadow-black/30"
+          className="relative w-[240px] xl:w-[280px] rounded-3xl overflow-hidden border border-[#2C2C2E]/40 shadow-2xl shadow-black/40"
           style={{ transform: "rotate(6deg)" }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/screen3.png"
             alt=""
-            className="w-full h-auto opacity-35"
+            className="w-full h-auto opacity-55"
+          />
+          {/* Radial depth glow — brighter center, fades outward */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background: "radial-gradient(ellipse at 50% 60%, transparent 20%, rgba(10,10,10,0.55) 70%, rgba(10,10,10,0.9) 100%)",
+            }}
           />
           {/* Edge fades */}
-          <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0a0a0a] to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
-          <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#0a0a0a] to-transparent" />
-          <div className="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-[#0a0a0a]/60 to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#0a0a0a] to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
+          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#0a0a0a] to-transparent" />
+          <div className="absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-[#0a0a0a]/60 to-transparent" />
         </div>
       </div>
 
