@@ -1,15 +1,17 @@
+import Image from "next/image";
+
 export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#0a0a0a]/80 border-b border-[#2C2C2E]">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/logo.png"
             alt="Prode"
             width={32}
             height={32}
             className="rounded-lg"
+            priority
           />
           <span className="text-white font-semibold text-lg">Prode</span>
         </a>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { supabase } from "@/lib/supabase";
 
 const LAUNCH_DATE = new Date("2026-07-01T00:00:00").getTime();
@@ -84,11 +85,14 @@ export default function Hero() {
           className="relative w-[240px] xl:w-[280px] rounded-3xl overflow-hidden border border-[#2C2C2E]/40 shadow-2xl shadow-black/40"
           style={{ transform: "rotate(-6deg)" }}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/screen1.png"
             alt=""
+            width={280}
+            height={607}
+            sizes="(max-width: 1280px) 240px, 280px"
             className="w-full h-auto opacity-55"
+            loading="lazy"
           />
           {/* Radial depth glow — brighter center, fades outward */}
           <div
@@ -111,11 +115,14 @@ export default function Hero() {
           className="relative w-[240px] xl:w-[280px] rounded-3xl overflow-hidden border border-[#2C2C2E]/40 shadow-2xl shadow-black/40"
           style={{ transform: "rotate(6deg)" }}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/screen3.png"
             alt=""
+            width={280}
+            height={607}
+            sizes="(max-width: 1280px) 240px, 280px"
             className="w-full h-auto opacity-55"
+            loading="lazy"
           />
           {/* Radial depth glow — brighter center, fades outward */}
           <div
