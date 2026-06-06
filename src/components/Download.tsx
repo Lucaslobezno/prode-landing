@@ -36,9 +36,9 @@ export default function Download() {
   };
 
   return (
-    <section id="download" className="py-24 sm:py-32">
-      <div className="max-w-4xl mx-auto px-6">
-        <div className="relative bg-[#141414] border border-[#2C2C2E] rounded-3xl p-10 sm:p-16 text-center overflow-hidden">
+    <section id="download" className="py-16 sm:py-24 md:py-32">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <div className="relative bg-[#141414] border border-[#2C2C2E] rounded-2xl sm:rounded-3xl p-7 sm:p-10 md:p-16 text-center overflow-hidden">
           {/* Background glow */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-[#1D9E75]/8 rounded-full blur-[100px] pointer-events-none" />
 
@@ -61,16 +61,16 @@ export default function Download() {
             </div>
 
             {/* Quote */}
-            <p className="text-[#8E8E93] text-lg italic mb-6 max-w-lg mx-auto">
+            <p className="text-[#8E8E93] text-base sm:text-lg italic mb-5 sm:mb-6 max-w-lg mx-auto">
               &ldquo;La disciplina es el puente entre tus metas y tus
               logros.&rdquo;
             </p>
 
             {/* CTA */}
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
               Sé el primero en probarlo
             </h2>
-            <p className="text-[#8E8E93] mb-10 max-w-md mx-auto">
+            <p className="text-[#8E8E93] text-sm sm:text-base mb-7 sm:mb-10 max-w-md mx-auto">
               Únete a la lista de espera y te avisaremos en cuanto Prode esté
               disponible. Sin spam, lo prometemos.
             </p>
@@ -103,7 +103,7 @@ export default function Download() {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto"
+                className="flex flex-col gap-3 max-w-md mx-auto w-full"
               >
                 <input
                   type="email"
@@ -111,12 +111,12 @@ export default function Download() {
                   placeholder="tu@email.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full sm:flex-1 bg-[#0a0a0a] border border-[#2C2C2E] rounded-xl px-5 py-3.5 text-white placeholder-[#636366] text-sm focus:outline-none focus:border-[#1D9E75] transition-colors"
+                  className="w-full bg-[#0a0a0a] border border-[#2C2C2E] rounded-xl px-5 py-3.5 text-white placeholder-[#636366] text-sm focus:outline-none focus:border-[#1D9E75] transition-colors min-h-[44px]"
                 />
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="w-full sm:w-auto bg-[#1D9E75] hover:bg-[#17805F] disabled:opacity-50 text-white font-semibold text-sm px-8 py-3.5 rounded-xl transition-all hover:scale-105 disabled:hover:scale-100"
+                  className="w-full bg-[#1D9E75] hover:bg-[#17805F] disabled:opacity-50 text-white font-semibold text-sm px-8 py-3.5 rounded-xl transition-all hover:scale-105 disabled:hover:scale-100 min-h-[44px]"
                 >
                   {status === "loading" ? "Enviando..." : "Avisarme"}
                 </button>

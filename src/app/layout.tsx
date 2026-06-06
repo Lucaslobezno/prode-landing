@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Prode - Productividad para emprendedores jóvenes",
+  title: "Prode - Tu app de productividad",
   description:
-    "La app de productividad diseñada para emprendedores jóvenes. Tareas, Pomodoro, hábitos y objetivos en un solo lugar.",
+    "La app de productividad que te ayuda a organizar tu día. Tareas, Pomodoro, hábitos y objetivos en un solo lugar.",
 };
 
 export default function RootLayout({
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${inter.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col overflow-x-hidden">
         {children}
         <Analytics />
       </body>

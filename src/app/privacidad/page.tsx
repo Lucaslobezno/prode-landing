@@ -94,10 +94,10 @@ export default function Privacidad() {
               Si tienes preguntas sobre esta política de privacidad, puedes
               escribirnos a{" "}
               <a
-                href="mailto:prode.app@gmail.com"
+                href="mailto:lucashernandezrivero@gmail.com"
                 className="text-[#1D9E75] hover:underline"
               >
-                prode.app@gmail.com
+                lucashernandezrivero@gmail.com
               </a>
               .
             </p>
